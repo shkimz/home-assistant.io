@@ -8,7 +8,7 @@
       "NODE_VERSION": "20"
     }
   },
-  "appPort": [4000],
+  "appPort": [22],
   "onCreateCommand": "bundle install && npm install",
   "containerEnv": { 
     "DEVCONTAINER": "true",
