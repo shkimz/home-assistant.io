@@ -1,6 +1,6 @@
 module Jekyll
-  class ActiveLinkTag < Liquid::Tag
-    def initialize(tag_name, text, token)
+  class NoneLinkTag < Liquid::Tag
+    def initialize(tag_image, text, token)
       super
       parts = text.split(' ', 2)
       @href = parts[0]
@@ -16,4 +16,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag('active_link', Jekyll::ActiveLinkTag)
+Liquid::Template.register_tag('none_link', Jekyll::NoneLinkTag)
