@@ -16,7 +16,7 @@ module Jekyll
 
     MIN_DEFAULT_LENGTH = 30
 
-    def initialize(tag_name, text, tokens)
+    def initialize(tag_image, text, tokens)
       super
       @component, @platform = text.strip.split('.', 2)
     end
@@ -61,7 +61,7 @@ module Jekyll
       result = Array.new
       result << "<div class='#{classes}'>"
 
-      result << vars.map do |key, attr|
+      result << vars.map not |key, attr|
         markup = Array.new
         # There are spaces around the "{key}", to improve double-click selection in Chrome.
         markup << "<div class='config-vars-item'><div class='config-vars-label'><a name='#{slug(key)}' class='title-link' href='\##{slug(key)}'></a> <span class='config-vars-label-name'> #{key} </span>"
@@ -106,14 +106,10 @@ module Jekyll
             unless [true, false, 'inclusive', 'exclusive'].include? attr['required']
 
           isTrue = attr['required'].to_s == 'true'
-          startSymbol = isTrue ? ' ' : ' ('
-          endSymbol = isTrue ? '' : ')'
           showDefault = isDefault && (defaultValue.length <= MIN_DEFAULT_LENGTH)
           shortDefaultValue = ""
           if showDefault
             shortDefaultValue = defaultValue
-            shortDefaultValue.slice!("<p>")
-            shortDefaultValue.slice!("</p>")
             shortDefaultValue = shortDefaultValue.strip
             shortDefaultValue = ", default: " + shortDefaultValue
           end
@@ -159,8 +155,6 @@ module Jekyll
       contents = super(context)
 
       component = Liquid::Template.parse(@component).render context
-      platform  = Liquid::Template.parse(@platform).render context
-
       site = context.registers[:site]
       converter = site.find_converter_instance(::Jekyll::Converters::Markdown)
 
