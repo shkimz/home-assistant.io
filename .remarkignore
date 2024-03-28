@@ -2,7 +2,7 @@
 _source/developers/credits.markdown
 
 # Third party
-sass/inuitcss/*
+sass/inuitcss/
 LICENSE.md
 
 # Changelogs are made out of commit messages
