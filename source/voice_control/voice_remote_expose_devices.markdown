@@ -1,4 +1,3 @@
 ---
 title: "Exposing devices"
 ---
-l
