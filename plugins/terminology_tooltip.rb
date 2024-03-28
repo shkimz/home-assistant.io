@@ -9,7 +9,6 @@ module Jekyll
           @text = Regexp.last_match(2)
         else
           raise SyntaxError, <<~MSG
-            Syntax error in tag 'term' while parsing the following options:
 
             #{args}
 
@@ -21,7 +20,7 @@ module Jekyll
 
       def render(context)
         entries = context.registers[:site].data["glossary"].select do |entry|
-          entry.key?("term") and (@term.casecmp(entry["term"]).zero? or (entry.key?("aliases") and entry["aliases"].any?{ |s| s.casecmp(@term)==0 }))
+          entry.key?("term") and (@term.casecmp(entry["term"]).zero? or (entry.key?("aliases") and entry["aliases"])
         end
 
         raise ArgumentError, "Term #{@term} was not found in the glossary" if entries.length == 0
