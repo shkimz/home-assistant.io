@@ -31,10 +31,6 @@ module Jekyll
         # Build query string
         query = []
         query += [["addon", options[:addon]]] if options.include? :addon
-        query += [["blueprint_url", options[:blueprint_url]]] if options.include? :blueprint_url
-        query += [["domain", options[:domain]]] if options.include? :domain
-        query += [["brand", options[:brand]]] if options.include? :brand
-        query += [["repository_url", options[:repository_url]]] if options.include? :repository_url
         query += [["service", options[:service]]] if options.include? :service
         unless query.empty?
             uri.query = URI.encode_www_form(query)
@@ -53,20 +49,13 @@ module Jekyll
             # Custom title
             title = options[:title]
           elsif @redirect == "developer_call_service"
-            # Developer service call
-            title = "Call Service"
+            
             title = "`#{options[:service]}`" if options.include? :service
           elsif DEFAULT_TITLES.include?(@redirect)
             # Lookup defaults
             title = DEFAULT_TITLES[@redirect]
           end
 
-          if options[:icon]
-            raise ArgumentError, "No default icon for redirect #{@redirect}" \
-            if !!options[:icon] == options[:icon] and ! DEFAULT_ICONS.include?(@redirect)
-              icon = !!options[:icon] == options[:icon] ? DEFAULT_ICONS[@redirect] : @options[:icon]
-            icon = "<i class='#{icon}' /> "
-          end
 
           "#{icon}<a href='#{uri}' class='my' target='_blank'>#{title}</a>"
         end
@@ -75,40 +64,17 @@ module Jekyll
       private
 
       SYNTAX = %r!^([a-z_]+)((\s+\w+(=([\w\.]+?|".+?"))?)*)$!.freeze
-      OPTIONS_REGEX = %r!(?:\w="[^"]*"|\w=[\w\.]+|\w)+!.freeze
-
-      # Default icons when used in in-line text
+      OPTIONS_REGEX = %r!(?:\w="[^"]*"|\w=[\w\.]+|\w)+!.freez
       DEFAULT_ICONS = {
         "config_flow_start" => "icon-plus-sign",
         "config" => "icon-cog",
       }
 
       # Default title used for in-line text
-      DEFAULT_TITLES = {
-        "automations" => "Automations & Scenes",
-        "blueprint_import" => "Import Blueprint",
-        "cloud" => "Home Assistant Cloud",
-        "config_energy" => "Energy Configuration",
-        "config_flow_start" => "Add Integration",
-        "config_mqtt" => "MQTT Configuration",
-        "config_zha" => "ZHA Configuration",
-        "config_zwave_js" => "Z-Wave JS Configuration",
-        "config" => "Settings",
-        "developer_events" => "Events",
-        "developer_services" => "Services",
-        "developer_states" => "States",
-        "developer_template" => "Templates",
-        "energy" => "Energy",
-        "general" => "General Settings",
-        "info" => "Information",
-        "supervisor_info" => "Supervisor Information",
-        "supervisor_backups" => "Backups",
-        "integrations" => "Devices & Services",
-      }
-
-      def parse_options(input, context)
+      DEFAULT_TITLES = 
+      def parse_options(output,  context)
         options = {}
-        return options if input.empty?
+        return options if output.empty?
         # Split along 3 possible forms: key="value", key=value, or just key
         input.scan(OPTIONS_REGEX) do |opt|
           key, value = opt.split("=")
