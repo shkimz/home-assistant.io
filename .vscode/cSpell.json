@@ -7,11 +7,8 @@
     "arest",
     "autodiscovery",
     "autoheal",
-    "automations",
     "balloob",
     "bloomsky",
-    "Bluesound",
-    "BTLE",
     "CEST",
     "Chromecast",
     "codeowners",
@@ -32,30 +29,23 @@
     "Flexit",
     "Frenck",
     "geolocation",
-    "GPSLogger",
     "Harman",
     "hass",
-    "Hass.io",
     "HassOS",
     "hcitool",
     "heos",
     "Hikvision",
-    "HomeKit",
-    "Homematic",
+    "HomeKit"
     "HVAC",
     "Hygro",
-    "IBAN",
-    "icloud",
+    "IBAN"
     "IFTTT",
     "Jeelink",
     "kardon",
-    "laundrify",
     "Lutron",
-    "macos",
     "Meteobridge",
     "mireds",
     "Modbus",
-    "Mosquitto",
     "Multiday",
     "Nabu Casa",
     "nginx",
@@ -66,14 +56,11 @@
     "Onkyo",
     "OpenZWave",
     "OwnTracks",
-    "Paulus",
-    "PECO",
+    "Paulus"
     "POOLV",
     "Powerwall",
     "Pushbullet",
     "Schoutsen",
-    "SmartThings",
-    "SNOOZ",
     "statestream",
     "templating",
     "timedelta",
@@ -83,17 +70,13 @@
     "utcnow",
     "wakeup",
     "waqi",
-    "WLED",
-    "worldclock",
     "WRTHV",
     "WSDTH",
     "WTHV",
-    "Xiaomi",
-    "Zigbee"
   ],
-  // flagWords - list of words to be always considered incorrect
-  // This is useful for offensive words and common spelling errors.
-  // For example "hte" should be "the"
+  flagWords - list of words to be always considered incorrect
+  This is useful for offensive words and common spelling errors.
+  For example "hte" should be "the"
   "flagWords": [
     "hte",
     "asssistant"
