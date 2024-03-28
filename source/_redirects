@@ -1,12 +1,3 @@
 ---
 layout: null
 ---
-
-# These redirects are handled by Netlify
-
-
-# General use redirects
-# Functionality-required redirec
-
-# Unsupported reasons that are also unhealthy
-/more-info/unsupported/privileged /more-info/unhealthy/privileged
