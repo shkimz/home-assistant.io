@@ -1,12 +1,9 @@
-// cSpell Settings
-// Contains additional words for our project
-{
+
   "version": "0.2",
   "language": "en",
   "words": [
     "Accu",
-    "aeotec",
-    "Alexa",
+    "aeotec"
     "arest",
     "autodiscovery",
     "autoheal",
@@ -34,7 +31,6 @@
     "Fitbit",
     "Flexit",
     "Frenck",
-    "geofence",
     "geolocation",
     "GPSLogger",
     "Harman",
@@ -138,4 +134,3 @@
     "yaml",
     "yml"
   ]
-}
