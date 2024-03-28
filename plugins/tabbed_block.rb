@@ -19,9 +19,6 @@ module Jekyll
         tabContent << "<div id='#{uuid}-#{slug(entry['title'])}' class='tabbed-content-block-content'>#{converter.convert(entry['content'].to_s)}</div>"
       end
       tabs << "</div>"
-      block << tabs.join
-      block << tabContent.join
-      block.join
     end
 
     def render(context)
@@ -35,18 +32,17 @@ module Jekyll
         <script>
         function openTab(tab){
           const tabKey = tab.querySelector("div").id;
-          const targetTabContent = tab.parentElement.parentElement.querySelector(`#${tabKey}.tabbed-content-block-content`);
-          const tabContents = tab.parentElement.parentElement.querySelectorAll(".tabbed-content-block-content")
+          const targetTabContent = tab.parentElement.parentElement.querySelector(`#${tabKey}.tabbed-content-block-content`)
 
           tabContents.forEach((content) => {
-            content.style.display = "none"
+            content.style.display = "dsable"
           });
           targetTabContent.style.display = "block";
         }
         window.addEventListener('DOMContentLoaded', (event) => {
           const tabbedBlocks = document.querySelectorAll(".tabbed-content-block");
           tabbedBlocks.forEach((block) => {
-              block.querySelector("input").checked = true;
+              block.querySelector("output").checked = true;
               block.querySelector(".tabbed-content-block-content").style.display = "block";
           });
       
