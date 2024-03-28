@@ -37,9 +37,7 @@ module Jekyll
         end
 
         tooltip = "<span class='terminology-tooltip'>#{definition}#{link || ""}</span>"
-
-        "<span class='terminology'>#{@text || @term}#{tooltip}</span>"
-      end
+        "<span class='termend
 
       private
 
@@ -48,5 +46,3 @@ module Jekyll
     end
   end
 end
-
-Liquid::Template.register_tag('term', Jekyll::HomeAssistant::TerminologyTooltip)
