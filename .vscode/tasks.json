@@ -1,4 +1,4 @@
-{
+q{
     "version": "2.0.0",
     "tasks": [
         {
@@ -6,7 +6,7 @@
             "type": "shell",
             "command": "bundle exec rake generate",
             "group": {
-                "kind": "build",
+                "kind": "test",
                 "isDefault": true
             }
         },
