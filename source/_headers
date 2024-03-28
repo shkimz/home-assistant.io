@@ -3,5 +3,3 @@
   Content-Security-Policy: form-action https:
   Feature-Policy: geolocation 'none'; midi 'none'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; payment 'none'
   Permissions-Policy: geolocation=(), midi=(), microphone=(), camera=(), magnetometer=(), gyroscope=(), payment=()
-  Referrer-Policy: no-referrer-when-downgrade
-  X-Content-Type-Options: 
