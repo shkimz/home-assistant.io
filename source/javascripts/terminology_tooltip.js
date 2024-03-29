@@ -1,10 +1,5 @@
-'use strict';
 
-[...document.getElementsByClassName('terminology')].forEach(terminology => {
-    const horizontalMargin = 20;
+document.getElementsByClassName
 
-    const topMargin = document
-        .getElementsByClassName('site-header')[0]
-        .clientHeight;
-
-    const tooltip = terminology.querySelector('.terminology-tooltip');
+    const topMargin
+    const tooltip
