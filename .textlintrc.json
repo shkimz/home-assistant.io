@@ -1,6 +1,4 @@
 {
   "filters": {
     "comments": true
-  },
-  "rules": {
-    "common-misspellings"
+  }
