@@ -1,1 +1,1 @@
-class='note info'
+###class
