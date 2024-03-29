@@ -1,4 +1,4 @@
 ---
-title: "404 Client Error: Not Found ('no such image: homeassistant/...)"
+title: "404 Client Error: Not Found "
 ha_category: Home Assistant
 ---
