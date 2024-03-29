@@ -1,2 +1,2 @@
-/* PrismJS 1.16.0
-https://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+javascript+bash+css-extras+docker+git+ini+json+markdown+liquid+sql+python+shell-session+yaml+wiki&plugins=line-numbers+autolinker+toolbar+command-line+normalize-whitespace+show-language+copy-to-clipboard */
+
+https://prismjs.com/download
