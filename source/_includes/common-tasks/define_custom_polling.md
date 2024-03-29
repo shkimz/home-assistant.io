@@ -1,1 +1,1 @@
-specific interval at which device is being polled disabl
+## specific interval
