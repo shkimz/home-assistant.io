@@ -2,24 +2,3 @@
 # ----------------------- #
 #      Main Configs       #
 # ----------------------- #
-
-url: https://www.home-assistant.io
-title: Home Assistant
-
-# RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: /atom.xml
-subscribe_email:
-email:
-
-# ----------------------- #
-#    Jekyll & Plugins     #
-# ----------------------- #
-
-permalink: /blog/:year/:month/:day/:title/
-source: source
-destination: public/
-plugins_dir: plugins
-code_dir: downloads/code
-category_dir: blog/categories
-
-
