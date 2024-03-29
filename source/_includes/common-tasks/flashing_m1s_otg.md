@@ -1,1 +1,2 @@
-Flashing an ODROID-M1S
+Flashing
+ODROID-M1S
