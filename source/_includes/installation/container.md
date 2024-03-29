@@ -1,17 +1,6 @@
-
-### Install Home Assistant Container
-
-
-### Platform installation
-
-
-### Restart Home Assistant
-
-
-### Docker compose
-
-
-### Exposing devices
-
-
-### Optimizations
+Home Assistant Container
+Platform installation
+Restart Home Assistant
+Docker compose
+Exposing devices
+Optimizations
