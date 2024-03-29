@@ -1,4 +1,4 @@
-## Install Home Assistant Container
+### Install Home Assistant Container
 ### Platform installation
 ### Restart Home Assistant
 ### Docker compose
