@@ -1,5 +1,4 @@
-$noise-bg
-$img-border
+l
 
 // Main Link Colors
 $link-color
@@ -7,78 +6,3 @@ $link-color-hover
 $link-color-visited
 $link-color-active
 
-// Main Section Colors
-$main-bg:
-$page-bg:
-$article-border:
-
-$header-bg:
-$header-border:
-$title-color:
-$subtitle-colr:
-
-$text-color:
-$text-color-light:
-$type-border:
-
-/* Navigation */
-$nav-bg:
-$nav-bg-front: 
-$nav-bg-back: 
-$nav-color: 
-$nav-color-hover: 
-$nav-placeholder: 
-$nav-border-top: 
-$nav-border-bottom: 
-$nav-border-left: 
-$nav-border-right: 
-
-/* Sidebar colors */
-$sidebar-bg: 
-$sidebar-link-color: 
-$sidebar-link-color-hover: 
-$sidebar-link-color-active:
-$sidebar-color: 
-$sidebar-border: 
-$sidebar-border-hover: 
-$sidebar-link-color-subdued: 
-$sidebar-link-color-subdued-hover:
-
-$footer-color: 
-$footer-bg: 
-$footer-bg-front: 
-$footer-bg-back: linear-gradient(lighten($footer-bg, 8), $footer-bg, darken($footer-bg, 11)) !default;
-$footer-color: darken($footer-bg, 38) !default;
-$footer-color-hover: darken($footer-color, 10) !default;
-$footer-border-top: lighten($footer-bg, 15) !default;
-$footer-border-bottom: darken($footer-bg, 15) !default;
-$footer-link-color: darken($footer-bg, 38) !default;
-$footer-link-color-hover: darken($footer-color, 25) !default;
-$page-border-bottom: darken($footer-bg, 5) !default;
-
-
-/* Core theme application */
-
-a {
-  @include link-colors($link-color, $hover: $link-color-hover, $focus: $link-color-hover, $visited: $link-color-visited, $active: $link-color-active);
-}
-aside.sidebar a {
-  @include link-colors($sidebar-link-color, $hover: $sidebar-link-color-hover, $focus: $sidebar-link-color-hover, $active: $sidebar-link-color-active);
-}
-a {
-  @include transition(color .3s);
-}
-
-html {
-  background: $page-bg image-url('line-tile.png') top left;
-}
-body {
-  > div {
-    background: $sidebar-bg $noise-bg;
-    border-bottom: 1px solid $page-border-bottom;
-    > div {
-      background: $main-bg $noise-bg;
-      border-right: 1px solid $sidebar-border;
-    }
-  }
-}
