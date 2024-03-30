@@ -1,2 +1,1 @@
-Flashing
-ODROID-M1S
+## Flashing
