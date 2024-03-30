@@ -1,2 +1,1 @@
-Flashing
-ODROID-N2+
+## Flashing
