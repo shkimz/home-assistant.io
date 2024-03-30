@@ -1,1 +1,1 @@
-Filters are applied as follows
+## Filters are applied
