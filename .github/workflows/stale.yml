@@ -1,5 +1,0 @@
-name: Stale
-
-on:
-  schedule:
-    - cron: "0 * * * *"
