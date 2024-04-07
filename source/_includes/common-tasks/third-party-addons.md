@@ -1,1 +1,0 @@
-##  Installing third-party add-on
