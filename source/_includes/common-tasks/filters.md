@@ -1,1 +1,0 @@
-## Filters are applied
